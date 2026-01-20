@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakshi Karna | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      align-items: center;
+      gap: 40px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      color: #fff;
+    }
+
+    .hero-text span {
+      color: #38bdf8;
+    }
+
+    .hero-text p {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #cbd5f5;
+    }
+
+    .hero-text button {
+      margin-top: 25px;
+      padding: 12px 28px;
+      border: none;
+      background: #38bdf8;
+      color: #0f172a;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero-text button:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: #0ea5e9;
+      box-shadow: 0 8px 20px rgba(14,165,233,0.4);
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #38bdf8;
+      box-shadow: 0 0 40px rgba(56,189,248,0.4);
+      transition: 0.4s;
+    }
+
+    .profile img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #fff;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #38bdf8;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+    }
+
+    p {
+      font-size: 17px;
+      color: #cbd5f5;
+      line-height: 1.8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 30px 20px;
+      border-radius: 16px;
+      transition: all 0.4s ease;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 140px;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      border-color: #38bdf8;
+      box-shadow: 0 10px 30px rgba(56,189,248,0.3);
+      background: #111827;
+    }
+
+    /* Contact Cards Styling */
+    .contact-card {
+      background: #111827;
+      border: 1px solid #38bdf8;
+      padding: 25px 20px;
+      border-radius: 16px;
+      transition: all 0.4s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.4);
+      background: #1e293b;
+    }
+
+    .contact-card strong {
+      font-size: 18px;
+      color: #38bdf8;
+    }
+
+    .contact-card p {
+      font-size: 16px;
+      color: #cbd5f5;
+      margin-top: 8px;
+    }
+
+    .contact-card .links a {
+      display: inline-block;
+      margin: 5px 0;
+      font-size: 15px;
+      color: #38bdf8;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card .links a:hover {
+      color: #0ea5e9;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text {
+        order: 2;
+      }
+
+      .profile {
+        order: 1;
+        margin-bottom: 20px;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 28px;
+      }
+
+      .hero-text p {
+        font-size: 15px;
+      }
+
+      .profile img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <div class="profile">
+      <img src="profile.jpg" alt="Sakshi Profile" />
+    </div>
+    <div class="hero-text">
+      <h1>Hello, I'm <span>Sakshi</span></h1>
+      <p>BCA Student • Frontend Developer • UI/UX Designer</p>
+      <button onclick="scrollToSection('projects')">View Projects</button>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a motivated BCA graduate with a strong interest in frontend development and UI/UX design.
+    I specialize in creating modern, responsive, and user-friendly web interfaces that focus on
+    usability, performance, and visual clarity.
+    <br /><br />
+    I have hands-on experience working with HTML, CSS, JavaScript, React, and design tools like Figma.
+    Along with development, I enjoy transforming ideas into intuitive digital experiences through
+    clean layouts, thoughtful interactions, and consistent design systems.
+    <br /><br />
+    I am continuously learning new technologies and design trends to improve my skills and deliver
+    high-quality solutions that align with real-world user needs and business goals.
+  </p>
+
+  <div class="grid" style="margin-top: 40px;">
+    <div class="card">
+      <strong>🎯 Focus</strong>
+      <p>Frontend Development & UI/UX Design</p>
+    </div>
+    <div class="card">
+      <strong>🛠 Tools</strong>
+      <p>Figma, React, Firebase, PHP, MySQL</p>
+    </div>
+    <div class="card">
+      <strong>📈 Strength</strong>
+      <p>Clean UI, Responsive Design, UX Thinking</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="45" />
+      <span>HTML</span>
+    </div>
+    <div class="card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="45" />
+      <span>CSS</span>
+    </div>
+    <div class="card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="45" />
+      <span>JavaScript</span>
+    </div>
+    <div class="card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="45" />
+      <span>React</span>
+    </div>
+    <div class="card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="45" />
+      <span>PHP</span>
+    </div>
+    <div class="card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="45" />
+      <span>MySQL</span>
+    </div>
+    <div class="card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="45" />
+      <span>Firebase</span>
+    </div>
+    <div class="card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="45" />
+      <span>Figma</span>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Food Ordering System</h3>
+      <p>
+        A web-based food ordering application developed using PHP and MySQL.
+        Features include user login, food listing, add to cart, order management,
+        and database integration.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Movie Recommendation System</h3>
+      <p>
+        Built using React and Firebase. Users can browse movies, get recommendations,
+        and use Firebase authentication for secure login and real-time data handling.
+      </p>
+    </div>
+    <div class="card">
+      <h3>UI/UX Design Projects</h3>
+      <p>
+        Designed multiple mobile and web interfaces using Figma and Balsamiq.
+        All designs are published on Dribbble focusing on clean layouts
+        and user-friendly experiences.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section>
+  <h2>Contact</h2>
+  <div class="grid">
+    <div class="card contact-card">
+      <strong>Email</strong>
+      <p>sakshikarna990@gmail.com</p>
+    </div>
+    <div class="card contact-card">
+      <strong>Phone</strong>
+      <p>+977-9865395022</p>
+    </div>
+    <div class="card contact-card">
+      <strong>Social Links</strong>
+      <div class="links">
+        <a href="https://github.com/sakshi07581" target="_blank">🔗 GitHub</a>
+        <a href="https://dribbble.com/sakshi-karna" target="_blank">🎨 Dribbble</a>
+        <a href="https://www.linkedin.com/in/sakshi-karna/" target="_blank">💼 LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Sakshi Kumari Karna |  Portfolio
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
